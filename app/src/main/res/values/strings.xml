@@ -14,17 +14,17 @@
     <string name="title_draw_pie_chart">饼图</string>
 
     <array name="view_array">
-        <item>自定义View 1</item>
-        <item>自定义View 2</item>
-        <item>自定义View 3</item>
-        <item>自定义View 4</item>
-        <item>自定义View 5</item>
-        <item>自定义View 6</item>
-        <item>自定义View 7</item>
-        <item>自定义View 8</item>
-        <item>自定义View 2-1</item>
-        <item>自定义View 2-2</item>
-        <item>自定义View 2-3</item>
-        <item>自定义View 3-1</item>
+        <item>HenCoderPracticeDraw 1</item>
+        <item>HenCoderPracticeDraw 2</item>
+        <item>HenCoderPracticeDraw 3</item>
+        <item>HenCoderPracticeDraw 4</item>
+        <item>HenCoderPracticeDraw 5</item>
+        <item>HenCoderPracticeDraw 6</item>
+        <item>HenCoderPracticeDraw 7</item>
+        <item>HenCoderPracticeDraw 8</item>
+        <item>HenCoderPracticeDraw 2-1</item>
+        <item>HenCoderPracticeDraw 2-2</item>
+        <item>HenCoderPracticeDraw 2-3</item>
+        <item>HenCoderPracticeDraw 3-1</item>
     </array>
 </resources>
