@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.kingcheergame.customview.PageFragment;
+import com.kingcheergame.customview.PageModel;
 import com.kingcheergame.customview.R;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class View1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view1);
+        setContentView(R.layout.activity_view_1);
         ButterKnife.bind(this);
 
         initModel();
@@ -38,7 +39,7 @@ public class View1Activity extends AppCompatActivity {
             @Override
             public Fragment getItem(int position) {
                 PageModel pageModel = pageModels.get(position);
-                return PageFragment.newInstance(pageModel.sampleImageRes, pageModel.practiceLayoutRes);
+                return PageFragment.newInstance(true, pageModel.getSampleRes(), pageModel.getPracticeLayoutRes());
             }
 
             @Override
@@ -49,7 +50,7 @@ public class View1Activity extends AppCompatActivity {
             @Nullable
             @Override
             public CharSequence getPageTitle(int position) {
-                return getString(pageModels.get(position).titleRes);
+                return getString(pageModels.get(position).getTitleRes());
             }
         });
 

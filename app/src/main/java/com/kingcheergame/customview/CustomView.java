@@ -1,12 +1,18 @@
 package com.kingcheergame.customview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ComposeShader;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.Shader;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -35,6 +41,7 @@ public class CustomView extends View {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -43,16 +50,11 @@ public class CustomView extends View {
 
         paint.setColor(Color.parseColor("#262626"));//画笔颜色
         paint.setStrokeWidth(10);//线条宽度
+//        paint.setStyle(Paint.Style.STROKE);
 
         initRuler(canvas);
 
-        paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.BLUE);//画笔颜色
-        canvas.drawArc(390, 790, 790, 1190, 180, 120, true, paint);
-        paint.setColor(Color.YELLOW);//画笔颜色
-        canvas.drawArc(400, 800, 800, 1200, -60, 90, true, paint);
-        paint.setColor(Color.GREEN);//画笔颜色
-        canvas.drawArc(400, 800, 800, 1200, 33, 147, true, paint);
+        drawBitmapWithCircle(canvas, 600, 900, 300, paint);
 
 //        pathDrawLine(canvas);
 //
@@ -224,5 +226,30 @@ public class CustomView extends View {
 
         canvas.drawPath(path, paint);
     }
+
+    /**
+     * 画圆形图
+     */
+    private void drawBitmapWithCircle(Canvas canvas, int centerX, int centerY, float radius, Paint drawPaint) {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.avatar);
+
+        final int halfBitmapWidth = bitmap.getWidth() / 2;
+        final int halfBitmapHeight = bitmap.getHeight() / 2;
+
+        BitmapShader bitmapShader = new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+        Matrix shaderMatrix = new Matrix();
+        float minSize = bitmap.getWidth() > bitmap.getHeight() ? bitmap.getHeight() : bitmap.getWidth();
+        float scale = radius * 2 / minSize;
+        // 先缩放
+        shaderMatrix.setScale(scale, scale);
+        // 由于缩放的中心点是(0,0)缩放之后,要让中心位移到需要的位置(具体可以用radius=100,minSize=400来验证一下)
+        shaderMatrix.postTranslate(centerX - (halfBitmapWidth * scale), centerY - (halfBitmapHeight * scale));
+        bitmapShader.setLocalMatrix(shaderMatrix);
+
+        drawPaint.setShader(bitmapShader);
+        canvas.drawCircle(centerX, centerY, radius, drawPaint);
+        drawPaint.setShader(null);
+    }
+
 
 }

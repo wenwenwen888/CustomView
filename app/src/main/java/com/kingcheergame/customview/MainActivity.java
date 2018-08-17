@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kingcheergame.customview.view1.View1Activity;
+import com.kingcheergame.customview.view2.View2Activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent();
                     if (position == 0) {
                         intent.setClass(MainActivity.this, View1Activity.class);
+                        startActivity(intent);
+                    } else if (position == 1) {
+                        intent.setClass(MainActivity.this, View2Activity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "请等待开发", Toast.LENGTH_SHORT).show();
