@@ -54,8 +54,6 @@ public class CustomView extends View {
 
         initRuler(canvas);
 
-        drawBitmapWithCircle(canvas, 600, 900, 300, paint);
-
 //        pathDrawLine(canvas);
 //
 //        pathDrawArc(canvas);
@@ -73,6 +71,10 @@ public class CustomView extends View {
 //        drawRoundRect(canvas);
 //
 //        drawArc(canvas);
+//
+//        drawBitmapWithCircle(canvas, 600, 900, 300, paint);
+
+          
 
     }
 
