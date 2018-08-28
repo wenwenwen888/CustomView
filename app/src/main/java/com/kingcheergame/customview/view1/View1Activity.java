@@ -30,7 +30,7 @@ public class View1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_1);
+        setContentView(R.layout.activity_view);
         ButterKnife.bind(this);
 
         initModel();

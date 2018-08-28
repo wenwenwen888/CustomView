@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
+import android.graphics.Camera;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ComposeShader;
@@ -74,7 +75,6 @@ public class CustomView extends View {
 //
 //        drawBitmapWithCircle(canvas, 600, 900, 300, paint);
 
-          
 
     }
 

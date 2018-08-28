@@ -19,6 +19,7 @@
         <activity android:name=".view1.View1Activity" />
         <activity android:name=".view2.View2Activity" />
         <activity android:name=".view3.View3Activity" />
+        <activity android:name=".view4.View4Activity" />
     </application>
 
 </manifest>

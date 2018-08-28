@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.kingcheergame.customview.view1.View1Activity;
 import com.kingcheergame.customview.view2.View2Activity;
 import com.kingcheergame.customview.view3.View3Activity;
+import com.kingcheergame.customview.view4.View4Activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,7 +66,10 @@ public class MainActivity extends AppCompatActivity {
                     } else if (position == 2) {
                         intent.setClass(MainActivity.this, View3Activity.class);
                         startActivity(intent);
-                    } else {
+                    }else if (position == 3) {
+                        intent.setClass(MainActivity.this, View4Activity.class);
+                        startActivity(intent);
+                    }  else {
                         Toast.makeText(MainActivity.this, "请等待开发", Toast.LENGTH_SHORT).show();
                     }
 
