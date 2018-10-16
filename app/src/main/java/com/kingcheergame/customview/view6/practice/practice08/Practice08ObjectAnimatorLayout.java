@@ -15,8 +15,6 @@ public class Practice08ObjectAnimatorLayout extends RelativeLayout {
     Practice08ObjectAnimatorView view;
     Button animateBt;
 
-    boolean isChange = false;
-
     public Practice08ObjectAnimatorLayout(Context context) {
         super(context);
     }
