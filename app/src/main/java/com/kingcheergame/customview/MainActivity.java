@@ -10,17 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kingcheergame.customview.view1.View1Activity;
-import com.kingcheergame.customview.view2.View2Activity;
-import com.kingcheergame.customview.view3.View3Activity;
-import com.kingcheergame.customview.view4.View4Activity;
-import com.kingcheergame.customview.view5.View5Activity;
-import com.kingcheergame.customview.view6.View6Activity;
-import com.kingcheergame.customview.view7.View7Activity;
+import com.kingcheergame.customview.view1_1.View1Activity;
+import com.kingcheergame.customview.view1_2.View2Activity;
+import com.kingcheergame.customview.view1_3.View3Activity;
+import com.kingcheergame.customview.view1_4.View4Activity;
+import com.kingcheergame.customview.view1_5.View5Activity;
+import com.kingcheergame.customview.view1_6.View6Activity;
+import com.kingcheergame.customview.view1_7.View7Activity;
+import com.kingcheergame.customview.view2_1.View8Activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else if (position == 6) {
                         intent.setClass(MainActivity.this, View7Activity.class);
+                        startActivity(intent);
+                    } else if (position == 7) {
+                        intent.setClass(MainActivity.this, View8Activity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "请等待开发", Toast.LENGTH_SHORT).show();

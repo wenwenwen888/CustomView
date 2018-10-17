@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.kingcheergame.customview.view5.sample.Sample03OnDrawLayout
+    <com.kingcheergame.customview.view1_5.sample.Sample03OnDrawLayout
         android:layout_width="160dp"
         android:layout_height="210dp"
         android:orientation="vertical">
 
-    </com.kingcheergame.customview.view5.sample.Sample03OnDrawLayout>
+    </com.kingcheergame.customview.view1_5.sample.Sample03OnDrawLayout>
 </FrameLayout>

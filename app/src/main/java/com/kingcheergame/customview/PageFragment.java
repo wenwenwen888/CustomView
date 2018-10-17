@@ -60,7 +60,7 @@ public class PageFragment extends Fragment {
             imageView.setVisibility(View.GONE);
             relativeLayout.setVisibility(View.VISIBLE);
 
-            ViewStub sampleStub = (ViewStub) view.findViewById(R.id.sampleStub);
+            ViewStub sampleStub = view.findViewById(R.id.sampleStub);
             sampleStub.setLayoutResource(sampleRes);
             sampleStub.inflate();
         }

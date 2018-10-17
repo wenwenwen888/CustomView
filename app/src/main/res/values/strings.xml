@@ -108,13 +108,22 @@
         <item>LinearOutSlowInInterpolator</item>
     </string-array>
 
-    <!--view6-->
+    <!--view7-->
     <string name="title_argb_evaluator">ArgbEvaluator</string>
     <string name="title_hsv_evaluator">HsvEvaluator</string>
     <string name="title_of_object">ofObject()</string>
     <string name="title_property_values_holder">PropertyValuesHolder</string>
     <string name="title_animator_set">AnimatorSet</string>
     <string name="title_keyframe">PropertyValuesHolder.ofKeyframe()</string>
+
+    <!--view2-1-->
+    <string name="title_square_image_view">SquareImageView</string>
+    <string name="title_message_edit_text">MessageEditText</string>
+    <string name="width">宽度</string>
+    <string name="height">高度</string>
+    <string name="adjust_frame">外框调节</string>
+    <string name="text_message">不得违背核心价值观</string>
+    <string name="eidt_text_with_message">在此输入用户名</string>
 
     <array name="view_array">
         <item>PracticeDraw 1-1</item>
@@ -124,7 +133,6 @@
         <item>PracticeDraw 1-5</item>
         <item>PracticeDraw 1-6</item>
         <item>PracticeDraw 1-7</item>
-        <item>PracticeDraw 1-8</item>
         <item>PracticeDraw 2-1</item>
         <item>PracticeDraw 2-2</item>
         <item>PracticeDraw 2-3</item>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view1.View1Activity">
+    tools:context=".view1_1.View1Activity">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
