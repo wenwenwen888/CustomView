@@ -20,6 +20,7 @@ import com.kingcheergame.customview.view1_5.View5Activity;
 import com.kingcheergame.customview.view1_6.View6Activity;
 import com.kingcheergame.customview.view1_7.View7Activity;
 import com.kingcheergame.customview.view2_1.View8Activity;
+import com.kingcheergame.customview.view2_2.View9Activity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -82,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else if (position == 7) {
                         intent.setClass(MainActivity.this, View8Activity.class);
+                        startActivity(intent);
+                    } else if (position == 8) {
+                        intent.setClass(MainActivity.this, View9Activity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "请等待开发", Toast.LENGTH_SHORT).show();
